@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, Download, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import AnimationWrapper from "@/components/animations/AnimationWrapper";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,20 +33,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-16 bg-surface-elevated relative shadow-raised transform-gpu">
+      {/* Highlight pour l'effet élevé */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-accent/[0.003] pointer-events-none"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/10"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-4 text-primary">
-            Prenons contact
-          </h2>
-          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-            Vous avez un projet commercial ? Une opportunité à discuter ? 
-            N'hésitez pas à me contacter, je serais ravi d'échanger avec vous.
-          </p>
+          <AnimationWrapper type="slideUp">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-4 text-primary">
+              Prenons contact
+            </h2>
+          </AnimationWrapper>
+          <AnimationWrapper type="slideUp" delay={0.2}>
+            <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+              Vous avez un projet commercial ? Une opportunité à discuter ? 
+              N'hésitez pas à me contacter, je serais ravi d'échanger avec vous.
+            </p>
+          </AnimationWrapper>
           
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-background rounded-lg p-8 shadow-elegant">
+            <AnimationWrapper type="slideLeft" delay={0.3}>
+              <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
               <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                 Envoyez-moi un message
               </h3>
@@ -100,18 +110,20 @@ const Contact = () => {
                   Envoyer le message
                 </Button>
               </form>
-            </div>
+              </div>
+            </AnimationWrapper>
             
             {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-background rounded-lg p-8 shadow-elegant">
+            <AnimationWrapper type="slideRight" delay={0.5}>
+                            <div className="space-y-8">
+                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                   Informations de contact
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shadow-gold-soft">
                       <Mail className="w-5 h-5 text-accent-foreground" />
                     </div>
                     <div>
@@ -121,7 +133,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shadow-gold-soft">
                       <Phone className="w-5 h-5 text-accent-foreground" />
                     </div>
                     <div>
@@ -131,7 +143,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shadow-gold-soft">
                       <MapPin className="w-5 h-5 text-accent-foreground" />
                     </div>
                     <div>
@@ -142,8 +154,8 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Quick Actions */}
-              <div className="bg-background rounded-lg p-8 shadow-elegant">
+                              {/* Quick Actions */}
+                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-xl font-bold mb-6 text-primary">
                   Actions rapides
                 </h3>
@@ -166,15 +178,16 @@ const Contact = () => {
                 </div>
               </div>
               
-              {/* Availability */}
-              <div className="bg-gradient-hero rounded-lg p-6 text-primary-foreground">
+                              {/* Availability */}
+                <div className="bg-gradient-hero rounded-lg p-6 text-primary-foreground shadow-elegant ring-1 ring-white/10">
                 <h4 className="font-bold mb-2">Disponibilité</h4>
                 <p className="text-sm opacity-90">
                   Je suis actuellement à la recherche de nouvelles opportunités en développement commercial B2B. 
                   Disponible pour un démarrage rapide.
                 </p>
               </div>
-            </div>
+              </div>
+            </AnimationWrapper>
           </div>
         </div>
       </div>
