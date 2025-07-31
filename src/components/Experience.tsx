@@ -99,7 +99,7 @@ const Experience = () => {
                       </div>
                     </div>
                     
-                    <div className="grid md:grid-cols-2 gap-3">
+                    <div className="grid md:grid-cols-2 gap-3 w-full max-w-full">
                       {exp.achievements.map((achievement, achievementIndex) => (
                         <div key={achievementIndex} className="flex items-start">
                           <div className="w-2 h-2 bg-success rounded-full mt-2 mr-3 flex-shrink-0"></div>

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/[0.02] to-black/[0.05] pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center md:text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center md:text-left w-full max-w-full">
             {/* Contact Info */}
             <div>
               <h3 className="font-serif text-xl font-bold mb-4">Matthieu Marchal</h3>

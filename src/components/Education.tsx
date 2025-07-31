@@ -86,7 +86,7 @@ const Education = () => {
               Outils & Technologies Maîtrisés
             </h3>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 w-full max-w-full">
               {/* HubSpot CRM */}
               <div className="bg-surface-card rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300 text-center group border border-white/30 relative">
                 {/* Badge Certifié */}

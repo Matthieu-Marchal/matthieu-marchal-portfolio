@@ -25,22 +25,22 @@ const Hero = () => {
       {/* Particules et effets de brillance */}
       <div className="absolute inset-0 bg-gradient-hero-particles opacity-60"></div>
       
-      {/* Motifs géométriques subtils - Desktop uniquement */}
-      <div className="absolute inset-0 opacity-20 hidden xl:block">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-accent/10 rounded-full animate-pulse-ring"></div>
-        <div className="absolute top-3/4 right-1/4 w-32 h-32 border border-primary/8 rounded-full animate-pulse-ring" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-accent/6 rounded-full animate-pulse-ring" style={{animationDelay: '4s'}}></div>
+      {/* Motifs géométriques subtils - Desktop uniquement avec contrôle strict */}
+      <div className="absolute inset-0 opacity-20 hidden xl:block overflow-hidden max-w-full">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-accent/10 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]"></div>
+        <div className="absolute top-3/4 right-1/4 w-32 h-32 border border-primary/8 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-accent/6 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]" style={{animationDelay: '4s'}}></div>
         
-        {/* Lignes de connexion subtiles */}
-        <div className="absolute top-1/3 left-1/2 w-px h-24 bg-gradient-to-b from-accent/5 to-transparent animate-float-gentle"></div>
-        <div className="absolute top-2/3 right-1/2 w-24 h-px bg-gradient-to-r from-accent/5 to-transparent animate-float-gentle" style={{animationDelay: '3s'}}></div>
+        {/* Lignes de connexion subtiles - sécurisées */}
+        <div className="absolute top-1/3 left-1/2 w-px h-24 bg-gradient-to-b from-accent/5 to-transparent animate-float-gentle max-w-[calc(100vw-2rem)]"></div>
+        <div className="absolute top-2/3 right-1/2 w-24 h-px bg-gradient-to-r from-accent/5 to-transparent animate-float-gentle max-w-[calc(100vw-2rem)]" style={{animationDelay: '3s'}}></div>
       </div>
       
       {/* Effet de transition depuis le header */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gradient-header to-transparent opacity-80"></div>
       
-      {/* Effets de brillance animés */}
-      <div className="absolute inset-0">
+      {/* Effets de brillance animés - sécurisés pour mobile */}
+      <div className="absolute inset-0 overflow-hidden w-full max-w-full">
         <motion.div 
           className="absolute top-20 left-10 w-2 h-2 bg-accent/40 rounded-full hidden lg:block"
           animate={{
@@ -151,7 +151,7 @@ const Hero = () => {
                 {/* Halo de brillance autour de la photo */}
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-full blur-xl scale-110 animate-pulse"></div>
                 
-                <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-elegant ring-2 ring-white/30 backdrop-blur-sm relative z-10 mx-auto lg:mx-0 max-w-full flex-shrink-0">
+                <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 max-w-[90vw] max-h-[90vw] rounded-full overflow-hidden shadow-elegant ring-2 ring-white/30 backdrop-blur-sm relative z-10 mx-auto lg:mx-0 flex-shrink-0">
                   <img 
                     src={profileImage} 
                     alt="Matthieu Marchal - Développeur Commercial"
@@ -161,9 +161,9 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5"></div>
                 </div>
                 
-                {/* Éléments décoratifs multiples */}
+                {/* Éléments décoratifs multiples - contrôlés pour mobile */}
                 <motion.div 
-                  className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-accent rounded-full opacity-25 -z-10 hidden lg:block"
+                  className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-accent rounded-full opacity-25 -z-10 hidden lg:block max-w-[20vw] max-h-[20vw]"
                   animate={{ 
                     scale: [1, 1.1, 1],
                     rotate: [0, 180, 360]
@@ -176,7 +176,7 @@ const Hero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute -top-2 -left-2 w-16 h-16 border-2 border-accent/30 rounded-full -z-10 hidden lg:block"
+                  className="absolute -top-2 -left-2 w-16 h-16 border-2 border-accent/30 rounded-full -z-10 hidden lg:block max-w-[15vw] max-h-[15vw]"
                   animate={{ 
                     rotate: [0, -360]
                   }}
@@ -188,7 +188,7 @@ const Hero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute top-10 -right-8 w-8 h-8 bg-primary/10 rounded-full -z-10 hidden lg:block"
+                  className="absolute top-10 -right-8 w-8 h-8 bg-primary/10 rounded-full -z-10 hidden lg:block max-w-[10vw] max-h-[10vw]"
                   animate={{ 
                     y: [-5, 5, -5],
                     opacity: [0.3, 0.7, 0.3]

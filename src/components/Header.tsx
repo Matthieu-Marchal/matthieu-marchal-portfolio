@@ -28,7 +28,7 @@ const Header = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4 xl:space-x-6 flex-wrap max-w-full">
             <button 
               onClick={() => scrollToSection('accueil')}
               className="text-foreground hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-md hover:bg-white/10"

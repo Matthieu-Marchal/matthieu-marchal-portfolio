@@ -51,7 +51,7 @@ const Contact = () => {
             </p>
           </AnimationWrapper>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12 w-full max-w-full">
             {/* Contact Form */}
             <AnimationWrapper type="slideLeft" delay={0.3}>
               <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
