@@ -25,24 +25,19 @@ const Hero = () => {
       {/* Particules et effets de brillance */}
       <div className="absolute inset-0 bg-gradient-hero-particles opacity-60"></div>
       
-      {/* Motifs géométriques subtils - Desktop uniquement avec contrôle strict */}
-      <div className="absolute inset-0 opacity-20 hidden xl:block overflow-hidden max-w-full">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-accent/10 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]"></div>
-        <div className="absolute top-3/4 right-1/4 w-32 h-32 border border-primary/8 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-accent/6 rounded-full animate-pulse-ring max-w-[calc(100vw-4rem)] max-h-[calc(100vh-4rem)]" style={{animationDelay: '4s'}}></div>
-        
-        {/* Lignes de connexion subtiles - sécurisées */}
-        <div className="absolute top-1/3 left-1/2 w-px h-24 bg-gradient-to-b from-accent/5 to-transparent animate-float-gentle max-w-[calc(100vw-2rem)]"></div>
-        <div className="absolute top-2/3 right-1/2 w-24 h-px bg-gradient-to-r from-accent/5 to-transparent animate-float-gentle max-w-[calc(100vw-2rem)]" style={{animationDelay: '3s'}}></div>
+      {/* Motifs géométriques subtils - Seulement sur très grands écrans, sans débordement */}
+      <div className="absolute inset-0 opacity-20 hidden 2xl:block overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 h-32 border border-accent/10 rounded-full animate-pulse-ring"></div>
+        <div className="absolute top-3/4 left-1/2 -translate-x-1/2 w-24 h-24 border border-primary/8 rounded-full animate-pulse-ring" style={{animationDelay: '2s'}}></div>
       </div>
       
       {/* Effet de transition depuis le header */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gradient-header to-transparent opacity-80"></div>
       
-      {/* Effets de brillance animés - sécurisés pour mobile */}
-      <div className="absolute inset-0 overflow-hidden w-full max-w-full">
+      {/* Effets de brillance animés - Seulement sur grands écrans, centré */}
+      <div className="absolute inset-0 overflow-hidden w-full max-w-full pointer-events-none hidden xl:block">
         <motion.div 
-          className="absolute top-20 left-10 w-2 h-2 bg-accent/40 rounded-full hidden lg:block"
+          className="absolute top-20 left-1/2 -translate-x-1/2 w-2 h-2 bg-accent/40 rounded-full"
           animate={{
             y: [-20, 20, -20],
             opacity: [0.2, 0.8, 0.2]
@@ -53,37 +48,11 @@ const Hero = () => {
             ease: "easeInOut"
           }}
         />
-        <motion.div 
-          className="absolute top-40 right-20 w-1.5 h-1.5 bg-accent/30 rounded-full hidden lg:block"
-          animate={{
-            y: [20, -20, 20],
-            opacity: [0.3, 0.7, 0.3]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        <motion.div 
-          className="absolute bottom-40 left-1/3 w-1 h-1 bg-accent/50 rounded-full hidden lg:block"
-          animate={{
-            x: [-10, 10, -10],
-            opacity: [0.4, 0.9, 0.4]
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
       </div>
       
       <div className="container mx-auto px-4 py-16 relative z-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 xl:gap-12 items-center w-full max-w-full">
             {/* Content */}
             <div className="text-center lg:text-left">
               <AnimationWrapper type="slideUp" delay={0.2}>
@@ -161,40 +130,17 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5"></div>
                 </div>
                 
-                {/* Éléments décoratifs multiples - contrôlés pour mobile */}
+                {/* Éléments décoratifs simplifiés - sans débordement */}
                 <motion.div 
-                  className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-accent rounded-full opacity-25 -z-10 hidden lg:block max-w-[20vw] max-h-[20vw]"
+                  className="absolute inset-0 rounded-full opacity-10 -z-10 hidden lg:block"
+                  style={{
+                    background: 'radial-gradient(circle, rgba(var(--accent), 0.1) 0%, transparent 70%)'
+                  }}
                   animate={{ 
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 180, 360]
+                    scale: [1, 1.05, 1]
                   }}
                   transition={{ 
-                    duration: 8, 
-                    repeat: Infinity, 
-                    ease: "linear" 
-                  }}
-                />
-                
-                <motion.div 
-                  className="absolute -top-2 -left-2 w-16 h-16 border-2 border-accent/30 rounded-full -z-10 hidden lg:block max-w-[15vw] max-h-[15vw]"
-                  animate={{ 
-                    rotate: [0, -360]
-                  }}
-                  transition={{ 
-                    duration: 12, 
-                    repeat: Infinity, 
-                    ease: "linear" 
-                  }}
-                />
-                
-                <motion.div 
-                  className="absolute top-10 -right-8 w-8 h-8 bg-primary/10 rounded-full -z-10 hidden lg:block max-w-[10vw] max-h-[10vw]"
-                  animate={{ 
-                    y: [-5, 5, -5],
-                    opacity: [0.3, 0.7, 0.3]
-                  }}
-                  transition={{ 
-                    duration: 3, 
+                    duration: 6, 
                     repeat: Infinity, 
                     ease: "easeInOut" 
                   }}

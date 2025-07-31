@@ -39,9 +39,9 @@ const SectionSeparator = ({ className = "", animated = true }: SectionSeparatorP
           }}
         />
         
-        {/* Points de brillance */}
+        {/* Points de brillance - centrés pour éviter débordement */}
         <motion.div
-          className="absolute left-1/4 top-0 w-1 h-1 bg-accent/80 rounded-full -translate-y-0.5"
+          className="absolute left-1/2 -translate-x-8 top-0 w-1 h-1 bg-accent/80 rounded-full -translate-y-0.5 hidden sm:block"
           animate={{ 
             opacity: [0.3, 1, 0.3],
             scale: [0.8, 1.2, 0.8]
@@ -53,7 +53,7 @@ const SectionSeparator = ({ className = "", animated = true }: SectionSeparatorP
           }}
         />
         <motion.div
-          className="absolute right-1/3 top-0 w-0.5 h-0.5 bg-accent/60 rounded-full -translate-y-0.25"
+          className="absolute right-1/2 translate-x-8 top-0 w-0.5 h-0.5 bg-accent/60 rounded-full -translate-y-0.25 hidden sm:block"
           animate={{ 
             opacity: [0.2, 0.8, 0.2],
             scale: [0.5, 1, 0.5]
