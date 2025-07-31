@@ -104,27 +104,7 @@ const Experience = () => {
               );
             })}
           </div>
-          
-          {/* Results summary */}
-          <div className="mt-16 bg-gradient-subtle rounded-lg p-8 text-center">
-            <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
-              Résultats clés de mon parcours
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">+20%</div>
-                <p className="text-muted-foreground">Croissance CA e-commerce</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">10+</div>
-                <p className="text-muted-foreground">Collaborateurs encadrés</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">6</div>
-                <p className="text-muted-foreground">Années d'expérience</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

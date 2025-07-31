@@ -70,47 +70,7 @@ const Skills = () => {
               );
             })}
           </div>
-          
-          {/* Additional section for technical tools */}
-          <div className="mt-16 bg-background rounded-lg p-8 shadow-elegant">
-            <h3 className="font-serif text-2xl font-bold text-center mb-8 text-primary">
-              Outils & Technologies
-            </h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-accent-foreground">CRM</span>
-                </div>
-                <p className="font-medium">HubSpot</p>
-                <p className="text-sm text-muted-foreground">Salesforce</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-accent-foreground">ERP</span>
-                </div>
-                <p className="font-medium">SAP</p>
-                <p className="text-sm text-muted-foreground">METI</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-accent-foreground">DATA</span>
-                </div>
-                <p className="font-medium">Google Suite</p>
-                <p className="text-sm text-muted-foreground">Looker Studio</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-accent-foreground">CS</span>
-                </div>
-                <p className="font-medium">Goodays</p>
-                <p className="text-sm text-muted-foreground">Relation client</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
