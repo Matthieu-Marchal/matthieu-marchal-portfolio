@@ -17,11 +17,21 @@ const Footer = () => {
               <div className="space-y-2">
                 <div className="flex items-center justify-center md:justify-start">
                   <Mail className="w-4 h-4 mr-2" />
-                  <span className="text-sm">matthieu.marchal@email.com</span>
+                  <a 
+                    href="mailto:matthieu.marchal@email.com"
+                    className="text-sm text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+                  >
+                    matthieu.marchal@email.com
+                  </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start">
                   <Phone className="w-4 h-4 mr-2" />
-                  <span className="text-sm">+33 6 XX XX XX XX</span>
+                  <a 
+                    href="tel:+33643337756"
+                    className="text-sm text-primary-foreground hover:text-primary-foreground/80 transition-colors"
+                  >
+                    +33 6 43 33 77 56
+                  </a>
                 </div>
               </div>
             </div>
@@ -62,7 +72,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Réseaux</h4>
               <div className="flex justify-center md:justify-start space-x-4">
                 <a 
-                  href="https://linkedin.com/in/matthieu-marchal" 
+                  href="https://www.linkedin.com/in/matthieu-marchal-ba9465278/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
