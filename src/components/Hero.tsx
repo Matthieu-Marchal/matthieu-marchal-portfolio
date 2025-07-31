@@ -25,8 +25,8 @@ const Hero = () => {
       {/* Particules et effets de brillance */}
       <div className="absolute inset-0 bg-gradient-hero-particles opacity-60"></div>
       
-      {/* Motifs géométriques subtils - Responsive pour mobile */}
-      <div className="absolute inset-0 opacity-20 hidden lg:block">
+      {/* Motifs géométriques subtils - Desktop uniquement */}
+      <div className="absolute inset-0 opacity-20 hidden xl:block">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-accent/10 rounded-full animate-pulse-ring"></div>
         <div className="absolute top-3/4 right-1/4 w-32 h-32 border border-primary/8 rounded-full animate-pulse-ring" style={{animationDelay: '2s'}}></div>
         <div className="absolute top-1/2 right-1/3 w-48 h-48 border border-accent/6 rounded-full animate-pulse-ring" style={{animationDelay: '4s'}}></div>
@@ -36,19 +36,13 @@ const Hero = () => {
         <div className="absolute top-2/3 right-1/2 w-24 h-px bg-gradient-to-r from-accent/5 to-transparent animate-float-gentle" style={{animationDelay: '3s'}}></div>
       </div>
       
-      {/* Version mobile simplifiée */}
-      <div className="absolute inset-0 opacity-20 lg:hidden">
-        <div className="absolute top-1/4 right-1/4 w-16 h-16 border border-accent/10 rounded-full animate-pulse-ring"></div>
-        <div className="absolute top-3/4 left-1/4 w-12 h-12 border border-primary/8 rounded-full animate-pulse-ring" style={{animationDelay: '2s'}}></div>
-      </div>
-      
       {/* Effet de transition depuis le header */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-gradient-header to-transparent opacity-80"></div>
       
       {/* Effets de brillance animés */}
       <div className="absolute inset-0">
         <motion.div 
-          className="absolute top-20 left-4 lg:left-10 w-2 h-2 bg-accent/40 rounded-full"
+          className="absolute top-20 left-10 w-2 h-2 bg-accent/40 rounded-full hidden lg:block"
           animate={{
             y: [-20, 20, -20],
             opacity: [0.2, 0.8, 0.2]
@@ -60,7 +54,7 @@ const Hero = () => {
           }}
         />
         <motion.div 
-          className="absolute top-40 right-4 lg:right-20 w-1.5 h-1.5 bg-accent/30 rounded-full"
+          className="absolute top-40 right-20 w-1.5 h-1.5 bg-accent/30 rounded-full hidden lg:block"
           animate={{
             y: [20, -20, 20],
             opacity: [0.3, 0.7, 0.3]
@@ -89,7 +83,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-16 relative z-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Content */}
             <div className="text-center lg:text-left">
               <AnimationWrapper type="slideUp" delay={0.2}>
@@ -157,7 +151,7 @@ const Hero = () => {
                 {/* Halo de brillance autour de la photo */}
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/20 rounded-full blur-xl scale-110 animate-pulse"></div>
                 
-                <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-elegant ring-2 ring-white/30 backdrop-blur-sm relative z-10 mx-auto lg:mx-0">
+                <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-elegant ring-2 ring-white/30 backdrop-blur-sm relative z-10 mx-auto lg:mx-0 max-w-full flex-shrink-0">
                   <img 
                     src={profileImage} 
                     alt="Matthieu Marchal - Développeur Commercial"
@@ -169,7 +163,7 @@ const Hero = () => {
                 
                 {/* Éléments décoratifs multiples */}
                 <motion.div 
-                  className="absolute -bottom-2 -right-2 lg:-bottom-4 lg:-right-4 w-16 h-16 lg:w-24 lg:h-24 bg-gradient-accent rounded-full opacity-25 -z-10"
+                  className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-accent rounded-full opacity-25 -z-10 hidden lg:block"
                   animate={{ 
                     scale: [1, 1.1, 1],
                     rotate: [0, 180, 360]
@@ -182,7 +176,7 @@ const Hero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute -top-1 -left-1 lg:-top-2 lg:-left-2 w-12 h-12 lg:w-16 lg:h-16 border-2 border-accent/30 rounded-full -z-10"
+                  className="absolute -top-2 -left-2 w-16 h-16 border-2 border-accent/30 rounded-full -z-10 hidden lg:block"
                   animate={{ 
                     rotate: [0, -360]
                   }}
@@ -194,7 +188,7 @@ const Hero = () => {
                 />
                 
                 <motion.div 
-                  className="absolute top-8 -right-4 lg:top-10 lg:-right-8 w-6 h-6 lg:w-8 lg:h-8 bg-primary/10 rounded-full -z-10"
+                  className="absolute top-10 -right-8 w-8 h-8 bg-primary/10 rounded-full -z-10 hidden lg:block"
                   animate={{ 
                     y: [-5, 5, -5],
                     opacity: [0.3, 0.7, 0.3]

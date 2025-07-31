@@ -47,13 +47,13 @@ const Projects = () => {
             </p>
           </AnimationWrapper>
           
-          <StaggerContainer className="grid lg:grid-cols-3 gap-8" staggerDelay={0.2}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.2}>
             {projects.map((project, index) => {
               const IconComponent = project.icon;
               return (
                 <StaggerItem key={index}>
                   <motion.div 
-                    className="bg-surface-card rounded-lg p-8 shadow-card group h-full border border-white/50"
+                    className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card group h-full border border-white/50"
                     whileHover={{ 
                       y: -8,
                       boxShadow: "0 25px 50px -12px hsl(220, 26%, 14%, 0.15), 0 0 0 1px hsl(45, 93%, 47%, 0.1)"

@@ -51,10 +51,10 @@ const Contact = () => {
             </p>
           </AnimationWrapper>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
             <AnimationWrapper type="slideLeft" delay={0.3}>
-              <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
+              <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
               <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                 Envoyez-moi un message
               </h3>
@@ -114,9 +114,9 @@ const Contact = () => {
             </AnimationWrapper>
             
             {/* Contact Info */}
-            <AnimationWrapper type="slideRight" delay={0.5}>
-                            <div className="space-y-8">
-                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
+                        <AnimationWrapper type="slideRight" delay={0.5}>
+              <div className="space-y-8">
+                <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                   Informations de contact
                 </h3>
@@ -165,7 +165,7 @@ const Contact = () => {
               </div>
               
                               {/* Quick Actions */}
-                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
+                <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-xl font-bold mb-6 text-primary">
                   Actions rapides
                 </h3>

@@ -216,21 +216,56 @@ All colors MUST be HSL.
     overflow-x: hidden;
   }
 
-  /* Corrections spécifiques pour mobile */
+  /* Corrections douces pour mobile */
   @media (max-width: 768px) {
     body {
       overflow-x: hidden;
       position: relative;
     }
     
-    /* Forcer tous les éléments absolus à rester dans les limites */
-    .absolute {
-      max-width: calc(100vw - 2rem);
+    /* Containers adaptatifs */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 100%;
+    }
+    
+    /* Sections qui s'adaptent */
+    section {
+      overflow-x: hidden;
+    }
+    
+    /* Cards responsive */
+    [class*="p-8"] {
+      padding: 1.5rem;
+    }
+    
+    /* Masquer certains éléments décoratifs sur mobile */
+    .mobile-hide {
+      display: none;
+    }
+  }
+  
+  /* Corrections pour très petits écrans */
+  @media (max-width: 480px) {
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    
+    [class*="p-8"] {
+      padding: 1rem;
     }
   }
 }
 
 @layer components {
+  /* Responsive simple et propre */
+  .mobile-safe {
+    width: 100%;
+    max-width: 100%;
+  }
+
   /* Animations personnalisées pour le Hero */
   @keyframes float-gentle {
     0%, 100% { transform: translateY(0px) rotate(0deg); }

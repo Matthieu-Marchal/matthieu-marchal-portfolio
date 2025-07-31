@@ -93,7 +93,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gradient-header-border pt-4 bg-white/20 backdrop-blur-sm rounded-lg mx-2">
+          <nav className="md:hidden mt-4 pb-4 border-t border-gradient-header-border pt-4 bg-white/20 backdrop-blur-sm rounded-lg mx-4">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('accueil')}
