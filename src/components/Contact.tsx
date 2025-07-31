@@ -128,7 +128,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">matthieu.marchal47210@gmail.com</p>
+                      <a 
+                        href="mailto:matthieu.marchal47210@gmail.com"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        matthieu.marchal47210@gmail.com
+                      </a>
                     </div>
                   </div>
                   
@@ -138,7 +143,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Téléphone</p>
-                      <p className="text-muted-foreground">+33 6 43 33 77 56</p>
+                      <a 
+                        href="tel:+33643337756"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        +33 6 43 33 77 56
+                      </a>
                     </div>
                   </div>
                   
@@ -161,10 +171,15 @@ const Contact = () => {
                 </h3>
                 
                 <div className="space-y-4">
-                  <Button variant="outline" size="lg" className="w-full justify-start">
+                  <a 
+                    href="https://www.linkedin.com/in/matthieu-marchal-ba9465278/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-start w-full px-6 py-3 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md text-sm font-medium transition-colors"
+                  >
                     <Linkedin className="w-5 h-5 mr-3" />
                     Voir mon profil LinkedIn
-                  </Button>
+                  </a>
                   
                   <Button variant="outline" size="lg" className="w-full justify-start">
                     <Download className="w-5 h-5 mr-3" />
@@ -182,7 +197,7 @@ const Contact = () => {
                 <div className="bg-gradient-hero rounded-lg p-6 text-primary-foreground shadow-elegant ring-1 ring-white/10">
                 <h4 className="font-bold mb-2">Disponibilité</h4>
                 <p className="text-sm opacity-90">
-                  Je suis actuellement à la recherche de nouvelles opportunités en développement commercial B2B. 
+                  Je suis actuellement à la recherche de nouvelles opportunités en développement commercial. 
                   Disponible pour un démarrage rapide.
                 </p>
               </div>
