@@ -5,18 +5,18 @@ import AnimationWrapper from "@/components/animations/AnimationWrapper";
 const Education = () => {
   const formations = [
     {
-      period: "2021 - 2024",
-      title: "Bachelor Développement Commercial et Marketing",
+      period: "2023 - 2024",
+      title: "Bachelor Responsable Commercial et Marketing",
       institution: "ISCOD",
       type: "Alternance",
       description: "Formation spécialisée en stratégie commerciale, marketing digital et gestion de la relation client",
       status: "completed"
     },
     {
-      period: "2018 - 2020",
+      period: "2020 - 2022",
       title: "BTS Management Commercial Opérationnel (MCO)",
       institution: "Lycée professionnel",
-      type: "Formation initiale",
+      type: "Alternance",
       description: "Management d'équipes commerciales, gestion d'unités commerciales, animation de réseaux",
       status: "completed"
     }

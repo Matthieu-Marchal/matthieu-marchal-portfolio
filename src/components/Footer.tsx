@@ -12,7 +12,7 @@ const Footer = () => {
             <div>
               <h3 className="font-serif text-xl font-bold mb-4">Matthieu Marchal</h3>
               <p className="text-primary-foreground/80 mb-4">
-                Développeur Commercial B2B
+                Développeur Commercial
               </p>
               <div className="space-y-2">
                 <div className="flex items-center justify-center md:justify-start">

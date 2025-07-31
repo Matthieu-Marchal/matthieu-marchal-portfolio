@@ -96,7 +96,7 @@ const Hero = () => {
               
               <AnimationWrapper type="slideUp" delay={0.4}>
                 <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
-                  Développeur Commercial B2B
+                  Développeur Commercial
                 </h2>
               </AnimationWrapper>
               
@@ -154,7 +154,7 @@ const Hero = () => {
                 <div className="w-80 h-80 rounded-full overflow-hidden shadow-elegant ring-2 ring-white/30 backdrop-blur-sm relative z-10">
                   <img 
                     src={profileImage} 
-                    alt="Matthieu Marchal - Développeur Commercial B2B"
+                    alt="Matthieu Marchal - Développeur Commercial"
                     className="w-full h-full object-cover"
                   />
                   {/* Overlay subtil */}
