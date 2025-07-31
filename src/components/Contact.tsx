@@ -33,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-surface-elevated relative shadow-raised transform-gpu">
+    <section id="contact" className="py-16 bg-surface-elevated relative shadow-raised transform-gpu w-full max-w-full overflow-hidden">
       {/* Highlight pour l'effet élevé */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-accent/[0.003] pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-white/10"></div>
@@ -54,7 +54,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
             <AnimationWrapper type="slideLeft" delay={0.3}>
-              <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
+              <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
               <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                 Envoyez-moi un message
               </h3>
@@ -116,7 +116,7 @@ const Contact = () => {
             {/* Contact Info */}
                         <AnimationWrapper type="slideRight" delay={0.5}>
               <div className="space-y-8">
-                <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
+                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-2xl font-bold mb-6 text-primary">
                   Informations de contact
                 </h3>
@@ -165,7 +165,7 @@ const Contact = () => {
               </div>
               
                               {/* Quick Actions */}
-                <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card border border-white/30">
+                <div className="bg-surface-card rounded-lg p-8 shadow-card border border-white/30">
                 <h3 className="font-serif text-xl font-bold mb-6 text-primary">
                   Actions rapides
                 </h3>

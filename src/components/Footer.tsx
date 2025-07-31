@@ -2,7 +2,7 @@ import { Linkedin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-16 relative shadow-inset-deep">
+    <footer className="bg-primary text-primary-foreground py-16 relative shadow-inset-deep w-full max-w-full overflow-hidden">
       {/* Overlay pour l'effet profond */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/[0.02] to-black/[0.05] pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">

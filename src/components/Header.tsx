@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-header backdrop-blur-md shadow-header border-b border-border/50 relative overflow-hidden">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-header backdrop-blur-md shadow-header border-b border-border/50 relative overflow-hidden w-full max-w-full">
       {/* Bordure dorée décorative */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-header-border"></div>
       {/* Effet de brillance subtile */}

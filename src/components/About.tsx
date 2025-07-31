@@ -3,7 +3,7 @@ import StaggerContainer, { StaggerItem } from "@/components/animations/StaggerCo
 
 const About = () => {
   return (
-    <section id="apropos" className="py-16 bg-surface-elevated relative shadow-inset">
+    <section id="apropos" className="py-16 bg-surface-elevated relative shadow-inset w-full max-w-full overflow-hidden">
       {/* Overlay subtil pour l'effet enfoncé */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.01] to-transparent pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">

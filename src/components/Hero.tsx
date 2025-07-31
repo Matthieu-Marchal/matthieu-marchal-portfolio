@@ -18,7 +18,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="accueil" className="min-h-screen flex items-center bg-gradient-hero-main pt-20 relative overflow-hidden">
+    <section id="accueil" className="min-h-screen flex items-center bg-gradient-hero-main pt-20 relative overflow-hidden w-full max-w-full">
       {/* Gradient overlay sophistiqué */}
       <div className="absolute inset-0 bg-gradient-hero-overlay"></div>
       

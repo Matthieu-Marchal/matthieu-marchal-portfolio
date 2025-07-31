@@ -43,7 +43,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experiences" className="py-16 bg-surface-elevated relative shadow-inset-deep">
+    <section id="experiences" className="py-16 bg-surface-elevated relative shadow-inset-deep w-full max-w-full overflow-hidden">
       {/* Overlay pour l'effet profondément enfoncé */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.015] via-transparent to-primary/[0.005] pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">

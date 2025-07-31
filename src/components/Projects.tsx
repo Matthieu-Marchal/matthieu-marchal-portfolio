@@ -29,7 +29,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projets" className="py-16 bg-surface-elevated relative shadow-elevated transform-gpu">
+    <section id="projets" className="py-16 bg-surface-elevated relative shadow-elevated transform-gpu w-full max-w-full overflow-hidden">
       {/* Effets premium pour la section la plus élevée */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] via-accent/[0.005] to-transparent pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
@@ -53,7 +53,7 @@ const Projects = () => {
               return (
                 <StaggerItem key={index}>
                   <motion.div 
-                    className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card group h-full border border-white/50"
+                    className="bg-surface-card rounded-lg p-8 shadow-card group h-full border border-white/50"
                     whileHover={{ 
                       y: -8,
                       boxShadow: "0 25px 50px -12px hsl(220, 26%, 14%, 0.15), 0 0 0 1px hsl(45, 93%, 47%, 0.1)"

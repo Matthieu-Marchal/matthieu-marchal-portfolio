@@ -25,7 +25,7 @@ const Education = () => {
 
 
   return (
-    <section id="formations" className="py-16 bg-surface-elevated relative shadow-inset">
+    <section id="formations" className="py-16 bg-surface-elevated relative shadow-inset w-full max-w-full overflow-hidden">
       {/* Overlay subtil pour l'effet enfoncé */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.008] to-transparent pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">

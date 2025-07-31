@@ -36,7 +36,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="competences" className="py-16 bg-secondary relative shadow-raised transform-gpu">
+    <section id="competences" className="py-16 bg-secondary relative shadow-raised transform-gpu w-full max-w-full overflow-hidden">
       {/* Highlight subtil pour l'effet élevé */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-white/10"></div>
@@ -58,7 +58,7 @@ const Skills = () => {
               const IconComponent = category.icon;
               return (
                 <StaggerItem key={index}>
-                  <div className="bg-surface-card rounded-lg p-6 lg:p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full border border-white/30">
+                  <div className="bg-surface-card rounded-lg p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full border border-white/30">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shadow-gold-soft">
                         <IconComponent className="w-6 h-6 text-accent-foreground" />
