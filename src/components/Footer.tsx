@@ -1,0 +1,91 @@
+import { Linkedin, Mail, Phone } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground py-12">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
+            {/* Contact Info */}
+            <div>
+              <h3 className="font-serif text-xl font-bold mb-4">Matthieu Marchal</h3>
+              <p className="text-primary-foreground/80 mb-4">
+                Développeur Commercial B2B
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center justify-center md:justify-start">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span className="text-sm">matthieu.marchal@email.com</span>
+                </div>
+                <div className="flex items-center justify-center md:justify-start">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span className="text-sm">+33 6 XX XX XX XX</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-semibold mb-4">Navigation</h4>
+              <div className="space-y-2 text-sm">
+                <button 
+                  onClick={() => document.getElementById('accueil')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  Accueil
+                </button>
+                <button 
+                  onClick={() => document.getElementById('apropos')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  À propos
+                </button>
+                <button 
+                  onClick={() => document.getElementById('competences')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  Compétences
+                </button>
+                <button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  Contact
+                </button>
+              </div>
+            </div>
+            
+            {/* Social Links */}
+            <div>
+              <h4 className="font-semibold mb-4">Réseaux</h4>
+              <div className="flex justify-center md:justify-start space-x-4">
+                <a 
+                  href="https://linkedin.com/in/matthieu-marchal" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a 
+                  href="mailto:matthieu.marchal@email.com"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/20 mt-8 pt-8 text-center">
+            <p className="text-primary-foreground/60 text-sm">
+              © 2024 Matthieu Marchal. Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
