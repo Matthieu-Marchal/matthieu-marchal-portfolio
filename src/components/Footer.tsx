@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="flex items-center justify-center md:justify-start">
                   <Mail className="w-4 h-4 mr-2" />
                   <a 
-                    href="mailto:matthieu.marchal@email.com"
+                    href="mailto:matthieu.marchal47210@gmail.com"
                     className="text-sm text-primary-foreground hover:text-primary-foreground/80 transition-colors"
                   >
                     matthieu.marchal@email.com
@@ -80,7 +80,7 @@ const Footer = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="mailto:matthieu.marchal@email.com"
+                  href="mailto:matthieu.marchal47210@gmail.com"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors"
                 >
                   <Mail className="w-5 h-5" />
