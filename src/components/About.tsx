@@ -41,7 +41,7 @@ const About = () => {
               </p>
             </AnimationWrapper>
             
-            <StaggerContainer className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full max-w-full" staggerDelay={0.15}>
+            <StaggerContainer className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8" staggerDelay={0.15}>
               <StaggerItem className="text-center">
                 <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4 shadow-gold-soft">
                   <span className="text-2xl font-bold text-accent-foreground">R</span>

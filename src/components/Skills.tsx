@@ -53,12 +53,12 @@ const Skills = () => {
             </p>
           </AnimationWrapper>
           
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full max-w-full" staggerDelay={0.2}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8" staggerDelay={0.2}>
             {skillCategories.map((category, index) => {
               const IconComponent = category.icon;
               return (
                 <StaggerItem key={index}>
-                  <div className="bg-surface-card rounded-lg p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full border border-white/30">
+                  <div className="bg-surface-card rounded-lg p-4 md:p-8 shadow-card hover:shadow-card-hover transition-all duration-300 h-full border border-white/30">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shadow-gold-soft">
                         <IconComponent className="w-6 h-6 text-accent-foreground" />

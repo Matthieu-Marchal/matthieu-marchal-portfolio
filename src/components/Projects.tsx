@@ -29,7 +29,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projets" className="py-16 bg-surface-elevated relative shadow-elevated transform-gpu w-full max-w-full overflow-hidden">
+    <section id="projets" className="py-16 bg-surface-elevated relative shadow-elevated transform-gpu overflow-x-hidden">
       {/* Effets premium pour la section la plus élevée */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] via-accent/[0.005] to-transparent pointer-events-none"></div>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent"></div>
@@ -47,15 +47,15 @@ const Projects = () => {
             </p>
           </AnimationWrapper>
           
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full max-w-full" staggerDelay={0.2}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8" staggerDelay={0.2}>
             {projects.map((project, index) => {
               const IconComponent = project.icon;
               return (
                 <StaggerItem key={index}>
                   <motion.div 
-                    className="bg-surface-card rounded-lg p-8 shadow-card group h-full border border-white/50"
+                    className="bg-surface-card rounded-lg p-4 md:p-8 shadow-card group h-full border border-white/50"
                     whileHover={{ 
-                      y: -8,
+                      scale: 1.02,
                       boxShadow: "0 25px 50px -12px hsl(220, 26%, 14%, 0.15), 0 0 0 1px hsl(45, 93%, 47%, 0.1)"
                     }}
                     transition={{ duration: 0.3 }}
@@ -104,34 +104,6 @@ const Projects = () => {
               );
             })}
           </StaggerContainer>
-          
-          {/* Call to action */}
-          <AnimationWrapper type="slideUp" delay={0.4} className="mt-16 text-center">
-            <motion.div 
-              className="bg-gradient-hero rounded-lg p-8 text-primary-foreground shadow-elegant ring-1 ring-white/10"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <h3 className="font-serif text-2xl font-bold mb-4">
-                Prêt à relever de nouveaux défis
-              </h3>
-              <p className="text-lg mb-6 opacity-90">
-                Ces projets reflètent ma capacité à analyser, agir et obtenir des résultats mesurables. 
-                Parlons de vos objectifs !
-              </p>
-              <motion.button 
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-lg font-medium transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Discutons de votre projet
-              </motion.button>
-            </motion.div>
-          </AnimationWrapper>
         </div>
       </div>
     </section>

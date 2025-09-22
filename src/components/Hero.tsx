@@ -6,8 +6,13 @@ import AnimationWrapper from "@/components/animations/AnimationWrapper";
 
 const Hero = () => {
   const handleDownloadCV = () => {
-    // Placeholder for CV download
-    console.log("CV download requested");
+    // Téléchargement du CV
+    const link = document.createElement('a');
+    link.href = '/documents/CV_Matthieu_Marchal.pdf';
+    link.download = 'CV_Matthieu_Marchal.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const scrollToContact = () => {
@@ -15,6 +20,10 @@ const Hero = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleContactEmail = () => {
+    window.location.href = 'mailto:matthieu.marchal47210@gmail.com?subject=Contact depuis le portfolio';
   };
 
   return (
@@ -52,7 +61,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-16 relative z-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8 xl:gap-12 items-center w-full max-w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 items-center">
             {/* Content */}
             <div className="text-center lg:text-left">
               <AnimationWrapper type="slideUp" delay={0.2}>
@@ -99,7 +108,7 @@ const Hero = () => {
                     <Button 
                       variant="outline" 
                       size="lg"
-                      onClick={scrollToContact}
+                      onClick={handleContactEmail}
                       className="font-medium"
                     >
                       <Mail className="w-5 h-5" />
