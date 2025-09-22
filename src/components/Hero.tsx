@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="text-center lg:text-left">
               <AnimationWrapper type="slideUp" delay={0.2}>
                 <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6 relative">
-                  <span className="relative z-10 inline-block">Matthieu Marchal</span>
+                  <span className="relative z-10">Matthieu Marchal</span>
                   {/* Effet de brillance subtil */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 animate-shimmer rounded-lg"></div>
                 </h1>
