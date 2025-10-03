@@ -156,6 +156,17 @@ const Education = () => {
                 <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Uber Manager / Deliveroo Partner </span>
               </div>
             </div>
+
+            {/* Sous-section Langues */}
+            <div className="mt-8 bg-gradient-subtle rounded-lg p-6">
+              <h4 className="font-semibold text-primary mb-4 text-center">Langues</h4>
+              <div className="flex flex-wrap justify-center gap-4">
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Français (natif)</span>
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Anglais (B2 - professionnel)</span>
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Espagnol (intermédiaire)</span>
+              </div>
+            </div>
+
           </div>
           
           {/* LinkedIn Section */}
