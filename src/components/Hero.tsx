@@ -134,6 +134,7 @@ const Hero = () => {
                     src={profileImage} 
                     alt="Matthieu Marchal - Développeur Commercial"
                     className="w-full h-full object-cover"
+                    style={{ objectPosition: '50% 20%' }}
                   />
                   {/* Overlay subtil */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-accent/5"></div>
