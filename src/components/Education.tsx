@@ -131,7 +131,7 @@ const Education = () => {
                 <p className="text-muted-foreground text-sm">Analytics & Looker Studio</p>
               </div>
               
-              {/* Goodays */}
+              {/* Goodays CRM */}
               <div className="bg-surface-card rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300 text-center group border border-white/30">
                 <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
