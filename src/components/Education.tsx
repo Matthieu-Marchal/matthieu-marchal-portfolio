@@ -157,13 +157,21 @@ const Education = () => {
               </div>
             </div>
 
-            {/* Sous-section Langues */}
+            {/* Sous-section Outils à usage personnel */}
             <div className="mt-8 bg-gradient-subtle rounded-lg p-6">
-              <h4 className="font-semibold text-primary mb-4 text-center">Langues</h4>
+              <h4 className="font-semibold text-primary mb-4 text-center">Outils à usage personnel</h4>
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Français (natif)</span>
-                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Anglais (B2 - professionnel)</span>
-                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Espagnol (intermédiaire)</span>
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Visual Studio Code</span>
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Notion</span>
+                <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Github</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Vercel</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">MozCast</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">SEOQuake</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Make</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">Claude</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">ManyPixels</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">AnswerThePublic</span>
+              <span className="px-3 py-1 bg-background rounded-full text-sm border border-border">WordPress</span>
               </div>
             </div>
 
