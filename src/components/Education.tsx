@@ -139,7 +139,7 @@ const Education = () => {
                     <path d="M16 8l-4 4-2-2-2 2 4 4 6-6-2-2z" fill="white"/>
                   </svg>
                 </div>
-                <h4 className="font-bold text-primary mb-2">Goodays</h4>
+                <h4 className="font-bold text-primary mb-2">Goodays CRM</h4>
                 <p className="text-muted-foreground text-sm">Expérience & satisfaction client</p>
               </div>
             </div>
